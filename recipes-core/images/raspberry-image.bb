@@ -17,4 +17,4 @@ PREFERRED_PROVIDER_virtual/wpebackend = "wpebackend-fdo"
 PACKAGECONFIG_pn-wpebackend-fdo = "wayland"
 IMAGE_INSTALL_append += " vim weston wpewebkit cog libwpe wpebackend-fdo"
 
-IMAGE_FSTYPES = "tar.xz ext3 rpi-sdimg"
+# IMAGE_FSTYPES = "tar.xz ext3 rpi-sdimg"
