@@ -1,0 +1,22 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 427231d76..70dfe14bf 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -65,3 +65,4 @@ file(GLOB_RECURSE SOURCES src/*.c)
+ add_library(lvgl STATIC ${SOURCES})
+ 
+ endif()
++# install(TARGETS lvgl RUNTIME DESTINATION lib)
+diff --git a/src/lv_conf_internal.h b/src/lv_conf_internal.h
+index 6abd8bdc6..695975b0e 100644
+--- a/src/lv_conf_internal.h
++++ b/src/lv_conf_internal.h
+@@ -38,7 +38,7 @@
+ #  elif defined(LV_CONF_INCLUDE_SIMPLE)        /*Or simply include lv_conf.h is enabled*/
+ #    include "lv_conf.h"
+ #  else
+-#    include "../../lv_conf.h"                 /*Else assume lv_conf.h is next to the lvgl folder*/
++#    include "../lv_conf.h"                 /*Else assume lv_conf.h is next to the lvgl folder*/
+ #  endif
+ #endif
+ 
